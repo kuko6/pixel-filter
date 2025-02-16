@@ -1,4 +1,8 @@
 .DS_Store
+.gradio/
+.vscode/
+
 imgs/
+
 *.jpg
 *.jpeg
