@@ -58,7 +58,7 @@ with gr.Blocks() as demo:
             examples=[
                 ["example_images/bananas.jpg", 16, False, True, 8],
                 ["example_images/scream.jpg", 16, False, True, 4],
-                ["example_images/cat.jpg", 32, True, False, None],
+                # ["example_images/cat.jpg", 32, True, False, None],
                 ["example_images/ducks.jpg", 4, False, True, 2],
             ],
             inputs=[img, pixel_size, blur, use_palette, k],
