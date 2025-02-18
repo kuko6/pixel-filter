@@ -9,4 +9,5 @@ app_file: app.py
 pinned: false
 ---
 
-# Simple Pixelart Filter :p
+# Simple Pixelart Filter
+

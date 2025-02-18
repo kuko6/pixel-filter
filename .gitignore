@@ -2,4 +2,5 @@
 .gradio/
 .vscode/
 
-imgs/
+__pycache__
+imgs
