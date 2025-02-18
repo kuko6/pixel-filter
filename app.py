@@ -57,7 +57,7 @@ def pixelate(img, pixel_size: int, blur=False, use_palette=False, k=8):
 
 
 def update_palette_visibility(use_palette):
-    return gr.update(visible=use_palette),  gr.update(visible=use_palette)
+    return gr.update(visible=use_palette), gr.update(visible=use_palette)
 
 
 with gr.Blocks() as demo:
@@ -99,4 +99,18 @@ with gr.Blocks() as demo:
         components=[img, blur, output_img, output_palette, use_palette]
     )
 
-demo.launch(debug=True, pwa=True)
+    with gr.Column():
+        gr.Markdown("## Examples")
+        gr.Examples(
+            examples=[
+                ["example_images/scream.jpg", 16, False, True, 4],
+                ["example_images/cat.jpg", 32, True, False, None],
+                ["example_images/ducks.jpg", 4, False, True, 2],
+            ],
+            inputs=[img, pixel_size, blur, use_palette, k],
+            outputs=[output_img, output_palette],
+            run_on_click=True,
+            fn=pixelate,
+        )
+
+demo.launch(debug=True)
