@@ -12,7 +12,7 @@ with gr.Blocks() as demo:
 
     with gr.Row(equal_height=True):
         with gr.Column(variant="panel"):
-            img = gr.Image(label="Input Image")
+            img = gr.Image(label="Input Image",show_fullscreen_button=False)
             pixel_size = gr.Number(label="Pixel Size", minimum=1, value=16)
             blur = gr.Checkbox(label="Blur")
             use_palette = gr.Checkbox(label="Use Palette")
@@ -20,12 +20,18 @@ with gr.Blocks() as demo:
 
         with gr.Column(variant="panel"):
             output_img = gr.Image(
-                label="Output Image", format="jpeg", show_share_button=True
+                label="Output Image", format="jpeg",
+                show_download_button=False,
+                show_share_button=False,
+                show_fullscreen_button=False
             )
             output_palette = gr.Image(
                 label="Image Palette",
+                format="jpeg",
                 show_download_button=False,
                 show_share_button=False,
+                show_fullscreen_button=False,
+                show_label=False,
                 visible=False,
             )
 
