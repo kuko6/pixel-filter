@@ -1,5 +1,5 @@
 # Simple Pixelart Filter
-A Gradio [app](https://kuko6-pixel-filter.hf.space/) that allows you to pixelate images, quantize colors and display color palettes.
+A [Gradio app](https://kuko6-pixel-filter.hf.space/) that allows you to pixelate images, quantize colors and display color palettes.
 
 <p align="center">
     <img src="example_images/bananas.jpg" alt="Bananas" width="30%">
